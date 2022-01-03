@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "744777203358",
+    "project_id": "flutter-the-baby-shop-app",
+    "storage_bucket": "flutter-the-baby-shop-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744777203358:android:b0b9cd36f3bfdedf25058f",
+        "android_client_info": {
+          "package_name": "com.thebabyshop.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744777203358-t8jv47h1vp8qskibrebjl1rmtqp9qo8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgIcqYtiSvfu2HIVEhGAU4aSZkyhv83E8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744777203358-t8jv47h1vp8qskibrebjl1rmtqp9qo8v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
