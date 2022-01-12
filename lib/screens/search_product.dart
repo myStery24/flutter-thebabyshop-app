@@ -47,6 +47,7 @@ class SearchProduct extends SearchDelegate<void> {
                           image: e.imgName,
                           name: e.name,
                           price: e.price,
+                          description: e.description,
                         ),
                       ),
                     );
@@ -78,6 +79,7 @@ class SearchProduct extends SearchDelegate<void> {
                           image: e.imgName,
                           name: e.name,
                           price: e.price,
+                          description: e.description,
                         ),
                       ),
                     );
