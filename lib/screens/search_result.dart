@@ -20,7 +20,7 @@ class SearchResult extends StatelessWidget {
   }) : super(key: key);
 
   Widget _buildMyGridView(context, searchCategory) {
-    //final Orientation orientation = MediaQuery.of(context).orientation;
+    // final Orientation orientation = MediaQuery.of(context).orientation;
     return Container(
         height: 600,
         child: GridView.count(
@@ -36,6 +36,7 @@ class SearchResult extends StatelessWidget {
                               image: e.imgName,
                               name: e.name,
                               price: e.price,
+                              description: e.description,
                             ),
                           ),
                         );
@@ -93,6 +94,7 @@ class SearchResult extends StatelessWidget {
                                 image: e.imgName,
                                 name: e.name,
                                 price: e.price,
+                                description: e.description,
                               ),
                             ),
                           );
