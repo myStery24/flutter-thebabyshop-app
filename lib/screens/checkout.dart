@@ -146,17 +146,17 @@ class _CheckOutState extends State<CheckOut> {
   Widget build(BuildContext context) {
     //user = FirebaseAuth.instance.currentUser;
     double subTotal = 0;
-    double discount = 3;
-    double discountRupees;
-    double shipping = 60;
+    double discount = 10;
+    double discountRinggit;
+    double shipping = 5;
 
     productProvider = Provider.of<ProductProvider>(context);
     productProvider.getCheckOutModelList.forEach((element) {
       subTotal += element.price * element.quentity;
     });
 
-    discountRupees = discount / 100 * subTotal;
-    total = subTotal + shipping - discountRupees;
+    discountRinggit = discount / 100 * subTotal;
+    total = subTotal + shipping - discountRinggit;
     if (productProvider.checkOutModelList.isEmpty) {
       total = 0.0;
       discount = 0.0;
@@ -213,58 +213,58 @@ class _CheckOutState extends State<CheckOut> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Container(
-                  height: 80,
-                  color: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: myList.isNotEmpty
-                      ? Column(
-                          children: <Widget>[
-                            Row(
-                              children: const [
-                                Icon(
-                                  Icons.location_on_outlined,
-                                  color: Colors.red,
-                                  size: 20,
-                                ),
-                                SizedBox(
-                                  width: 10.0,
-                                ),
-                                Text(
-                                  "Address: ",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 15.0,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 5.0,
-                            ),
-                            Text(
-                              address,
-                              softWrap: false,
-                              overflow: TextOverflow.ellipsis,
-                              maxLines: 3,
-                              textAlign: TextAlign.left,
-                              style: const TextStyle(
-                                //fontWeight: FontWeight.w500,
-                                fontSize: 15.0,
+                height: 80,
+                color: Colors.white,
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: myList.isNotEmpty
+                    ? Column(
+                        children: <Widget>[
+                          Row(
+                            children: const [
+                              Icon(
+                                Icons.location_on_outlined,
+                                color: Colors.red,
+                                size: 20,
                               ),
-                            )
-                          ],
-                        )
-                      : const Text(
-                          "No item yet!",
-                          softWrap: false,
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 3,
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            //fontWeight: FontWeight.w500,
-                            fontSize: 15.0,
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              Text(
+                                "Address: ",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 15.0,
+                                ),
+                              ),
+                            ],
                           ),
+                          const SizedBox(
+                            height: 5.0,
+                          ),
+                          Text(
+                            address,
+                            softWrap: false,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 3,
+                            textAlign: TextAlign.left,
+                            style: const TextStyle(
+                              //fontWeight: FontWeight.w500,
+                              fontSize: 15.0,
+                            ),
+                          )
+                        ],
+                      )
+                    : const Text(
+                        "No item yet!",
+                        softWrap: false,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 3,
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          //fontWeight: FontWeight.w500,
+                          fontSize: 15.0,
                         ),
+                      ),
               ),
               Container(
                   height: 50,
