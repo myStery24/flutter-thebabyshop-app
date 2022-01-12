@@ -87,21 +87,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
       isValid = false;
     }
 
-    createAccount(name, email, password).then((user) {
-      if (user != null) {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const TheBabyShopApp()));
-        // print('Account created successfully');
-      } else {
-        isValid = false;
-        final snackbar = SnackBar(
-          content: const Text(
-              'An error occurred, you might have registered before.'),
-          action: SnackBarAction(label: 'Dismiss', onPressed: () {}),
-        );
-        ScaffoldMessenger.of(context).showSnackBar(snackbar);
-      }
-    });
+    if (isValid) {
+      createAccount(name, email, password).then((user) {
+        if (user != null) {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const TheBabyShopApp()));
+          // print('Account created successfully');
+        } else {
+          isValid = false;
+          final snackbar = SnackBar(
+            content: const Text(
+                'An error occurred, you might have registered before.'),
+            action: SnackBarAction(label: 'Dismiss', onPressed: () {}),
+          );
+          ScaffoldMessenger.of(context).showSnackBar(snackbar);
+        }
+      });
+    }
 
     return isValid;
   }
