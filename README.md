@@ -9,7 +9,7 @@ Version 1.0.1
 - Bug fixed: Users can access the home screen even in the sign up screen passwords do not match 
 - Bug fixed: Search results
 - Updated discount rate and shipping fees
-- Update version code and version name
+- Updated version code and version name
 
 ## Getting Started
 
